@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pace &amp; Sole</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./imges/icon-2.png" />
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+      <div class="logo">Pace &amp; Sole</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#newstyle">New style</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="dark-shop">
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <button id="btn" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button
+          id="language-toggle"
+          class="language-toggle"
+          type="button"
+          aria-label="Switch to Arabic"
+        >
+          AR
+        </button>
+        <button
+          class="cart-shoping"
+          id="cart-toggle"
+          aria-label="Open shopping cart"
+          aria-expanded="false"
+        >
+          <i class="fas fa-shopping-cart"></i
+          ><span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Shopping cart panel start -->
+    <aside
+      class="cart-panel"
+      id="cart-panel"
+      aria-label="Shopping cart"
+      aria-hidden="true"
+    >
+      <div class="cart-panel-header">
+        <h2>Your Cart</h2>
+        <button
+          class="cart-close"
+          id="cart-close"
+          aria-label="Close shopping cart"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p class="cart-empty">Your cart is empty.</p>
+      </div>
+      <div class="cart-summary">
+        <strong>Total <span id="cart-total">$0.00</span></strong
+        ><button class="checkout-button" id="checkout-button" disabled>
+          Checkout
+        </button>
+      </div>
+      <form
+        class="checkout-form"
+        id="checkout-form"
+        action="https://formsubmit.co/emad1165818@gmail.com"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="_subject" value="New shoe order" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" id="order-items" name="order_items" />
+        <h2>Delivery details</h2>
+        <label for="checkout-name">Name</label
+        ><input id="checkout-name" name="name" type="text" required />
+        <label for="checkout-email">Email</label
+        ><input id="checkout-email" name="email" type="email" required />
+        <label for="checkout-phone">Phone number</label
+        ><input id="checkout-phone" name="phone" type="tel" required />
+        <label for="checkout-address">Delivery address</label
+        ><textarea
+          id="checkout-address"
+          name="address"
+          rows="3"
+          required
+        ></textarea>
+        <label for="checkout-description">Order description</label
+        ><textarea
+          id="checkout-description"
+          name="description"
+          rows="3"
+        ></textarea>
+        <label for="checkout-receipt">Bank transfer receipt photo</label
+        ><input
+          id="checkout-receipt"
+          name="receipt"
+          type="file"
+          accept="image/*"
+        />
+        <button class="place-order-button" type="submit">Send order</button>
+        <p
+          class="checkout-message"
+          id="checkout-message"
+          role="status"
+          hidden
+        ></p>
+      </form>
+    </aside>
+    <!-- Shopping cart panel end -->
+
+    <!-- Main content start -->
+    <main>
+      <!-- Home section start -->
+      <section id="home">
+        <div class="container">
+          <h1>Walk with Confidence</h1>
+          <p>
+            Modern designs, superior quality and unmatched comfort built for
+            every step you take.
+          </p>
+          <a href="#products" class="shop-1">Shop Now</a>
+        </div>
+      </section>
+      <!-- Home section end -->
+
+      <!-- Products section start -->
+      <section id="products">
+        <div class="container">
+          <div class="title">
+            <h1>Our Best Collection</h1>
+            <p>
+              Explore our exclusive collection of premium shoes for every style.
+            </p>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="row">
+            <article class="card">
+              <img src="./imges/25837.jpg" alt="Cloud chunky sneaker" />
+              <div class="card-content">
+                <h2>Cloud Chunky Sneaker</h2>
+                <p>All-day comfort &amp; modern style</p>
+                <h3>$19.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25834.jpg" alt="Urban felt classic shoe" />
+              <div class="card-content">
+                <h2>Urban Felt Classic</h2>
+                <p>Lightweight &amp; breathable canvas</p>
+                <h3>$19.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25831.jpg" alt="Suede loafer" />
+              <div class="card-content">
+                <h2>EasySlip Suede Loafer</h2>
+                <p>Effortless style &amp; soft padding</p>
+                <h3>$29.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25833.jpg" alt="High-top runner" />
+              <div class="card-content">
+                <h2>Trek High-Top Runner</h2>
+                <p>Ankle support &amp; durable design</p>
+                <h3>$39.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Products section end -->
+
+      <!-- New style section start -->
+      <section id="newstyle">
+        <div class="container">
+          <div class="title">
+            <h1>Our New Style Shoes</h1>
+            <p>Explore our latest collection of modern footwear.</p>
+            <img
+              src="./imges/icon-title.png"
+              alt="Shoe collection icon"
+              width="100"
+              height="100"
+            />
+          </div>
+          <div class="row">
+            <article class="card">
+              <img src="./imges/25840.jpg" alt="New style shoe" />
+              <div class="card-content">
+                <h2>Modern Street</h2>
+                <p>Lightweight everyday style</p>
+                <h3>$18.00</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25841.jpg" alt="New style shoe" />
+              <div class="card-content">
+                <h2>Daily Runner</h2>
+                <p>Flexible and comfortable</p>
+                <h3>$20.00</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25842.jpg" alt="New style shoe" />
+              <div class="card-content">
+                <h2>City Step</h2>
+                <p>Simple style for every day</p>
+                <h3>$19.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./imges/25838.jpg" alt="New style shoe" />
+              <div class="card-content">
+                <h2>Weekend Walk</h2>
+                <p>Soft support and clean design</p>
+                <h3>$28.99</h3>
+                <button class="buy">Add to Cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- New style section end -->
+
+      <!-- About section start -->
+      <section id="about">
+        <div class="container">
+          <div class="title">
+            <h1>About Us</h1>
+            <p>Comfort, quality, and confident steps.</p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h1>About Pace &amp; Sole</h1>
+              <p>
+                We believe the right pair of shoes can make every journey
+                better. Our collection combines modern design, reliable quality,
+                and everyday comfort.
+              </p>
+              <button class="buy">Order now</button>
+            </div>
+            <img src="./imges/25865.jpg" alt="Pace and Sole shoes" />
+          </div>
+        </div>
+      </section>
+      <!-- About section end -->
+
+      <!-- Contact section start -->
+      <section id="contact">
+        <div class="container">
+          <div class="title">
+            <h1>Contact Us</h1>
+            <p>Have a question about our shoes? Send us a message.</p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <form action="#">
+                <div class="form-group">
+                  <label for="name">Name</label
+                  ><input id="name" type="text" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label
+                  ><input id="email" type="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label
+                  ><textarea id="message" rows="6" required></textarea>
+                </div>
+                <button class="buy" type="submit">Send message</button>
+              </form>
+              <a
+                class="whatsapp-button"
+                href="https://wa.me/96566875869?text=Hello%20Pace%20%26%20Sole%2C%20I%20have%20a%20question%20about%20your%20shoes."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact us on WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+            <img src="./imges/25829.jpg" alt="Featured shoe" />
+          </div>
+        </div>
+      </section>
+      <!-- Contact section end -->
+    </main>
+    <!-- Main content end -->
+
+    <!-- Footer start -->
+    <footer class="site-footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="logo">Pace &amp; Sole</div>
+          <p>Modern shoes made for every journey.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <a href="#home">Home</a><a href="#products">Products</a
+          ><a href="#about">About us</a>
+        </div>
+        <div class="footer-column footer-contact">
+          <h2>Visit us</h2>
+          <p>KWT City</p>
+          <p>Emad1165818@gmail.com</p>
+          <p>66875869</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pace &amp; Sole. All rights reserved | BY EMAD IT</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- JavaScript start -->
+    <script src="main.js"></script>
+    <!-- JavaScript end -->
+  </body>
+</html>
