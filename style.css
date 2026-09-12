@@ -230,6 +230,7 @@ html[dir="rtl"] #contact textarea {
   height: 58px;
   object-fit: cover;
   border-radius: 6px;
+  margin: auto;
 }
 
 .cart-item div {
