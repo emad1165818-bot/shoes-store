@@ -486,6 +486,7 @@ body.dark .checkout-message {
   width: min(100px, 30vw);
   height: auto;
   object-fit: contain;
+  margin: auto;
 }
 
 .row {
